@@ -31,10 +31,8 @@ function compareUserData(data){
       totaldifference = Math.abs(data.scores[j]-friends[i].scores[j]);
       console.log(totaldifference);
       friendScore = friendScore + totaldifference;
-      // lowest friend score and who it is related to
-
-      // pseudocode
-      // find which find had the lowest match
+      // calc. lowest friend score and who it is related to
+      // find which find friend had the lowest match
     };
   };
 }

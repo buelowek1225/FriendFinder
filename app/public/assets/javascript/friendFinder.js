@@ -18,10 +18,14 @@ $("#submitButton").on("click", function(event){
         scores.push(numScore);
      }
 
-    // if score is "" then through alert to fill in questions
-
     $.post("/api/friends", newFriends, function(data){
-        console.log(data);
+        // console.log(data);
     })
     console.log(newFriends);
 })
+
+    // ========================= Pseudocode ==========================
+    // if score is "" then through alert to fill in questions/modal
+    // validate name
+    // validate photo
+    // upon closing match display modal call function to clear survey input

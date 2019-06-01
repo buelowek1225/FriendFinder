@@ -1,3 +1,6 @@
+.body  {
+   background-image: url("../../../data/images/siloette.jpeg");
+ }
 .footer {
     position: fixed;
     left: 0;
@@ -12,3 +15,10 @@
     margin-left: 35px;
     margin-right: 35px;
  }
+
+.submitButton {
+   text-align: center;
+   margin-top: 30px;
+   margin-bottom: 30px;
+}
+   
