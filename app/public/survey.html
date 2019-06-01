@@ -29,16 +29,17 @@
         <form>
             <div class="form-group">
               <label for="exampleFormControlInput1">Name (Required)</label>
-              <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Jill Smith">
+              <input type="email" class="form-control" id="userName" placeholder="Jill Smith">
             </div>
             <div class="form-group">
                 <label for="exampleFormControlInput1">Link to Photo Image (Required)</label>
-                <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="example.jpg">
+                <input type="email" class="form-control" id="userPhoto" placeholder="example.jpg">
             </div>
             <h4>Question 1</h4>
             <div class="form-group">
                 <label for="exampleFormControlSelect1">Do you enjoy spending time in your home?</label>
-                <select class="form-control" id="exampleFormControlSelect1">
+                <select class="form-control" id="q1">
+                <option></option>
                 <option>1 (Strongly Disagree)</option>
                 <option>2</option>
                 <option>3</option>
@@ -49,7 +50,8 @@
             <h4>Question 2</h4>
             <div class="form-group">
                 <label for="exampleFormControlSelect1">Are you an adventure seeker?</label>
-                <select class="form-control" id="exampleFormControlSelect1">
+                <select class="form-control" id="q2">
+                    <option></option>
                     <option>1 (Strongly Disagree)</option>
                     <option>2</option>
                     <option>3</option>
@@ -60,7 +62,8 @@
             <h4>Question 3</h4>
             <div class="form-group">
                 <label for="exampleFormControlSelect1">Are you artistic?</label>
-                <select class="form-control" id="exampleFormControlSelect1">
+                <select class="form-control" id="q3">
+                <option></option>
                 <option>1 (Strongly Disagree)</option>
                 <option>2</option>
                 <option>3</option>
@@ -71,7 +74,8 @@
             <h4>Question 4</h4>
             <div class="form-group">
                 <label for="exampleFormControlSelect1">Do you appreciate and enjoy cooking?</label>
-                <select class="form-control" id="exampleFormControlSelect1">
+                <select class="form-control" id="q4">
+                    <option></option>
                     <option>1 (Strongly Disagree)</option>
                     <option>2</option>
                     <option>3</option>
@@ -82,7 +86,8 @@
             <h4>Question 5</h4>
             <div class="form-group">
                 <label for="exampleFormControlSelect1">Are you an introvert?</label>
-                <select class="form-control" id="exampleFormControlSelect1">
+                <select class="form-control" id="q5">
+                <option></option>
                 <option>1 (Strongly Disagree)</option>
                 <option>2</option>
                 <option>3</option>
@@ -93,7 +98,8 @@
             <h4>Question 6</h4>
             <div class="form-group">
                 <label for="exampleFormControlSelect1">Are you a feminist?</label>
-                <select class="form-control" id="exampleFormControlSelect1">
+                <select class="form-control" id="q6">
+                    <option></option>
                     <option>1 (Strongly Disagree)</option>
                     <option>2</option>
                     <option>3</option>
@@ -104,7 +110,8 @@
             <h4>Question 7</h4>
             <div class="form-group">
                 <label for="exampleFormControlSelect1">Do you spend more time with family than family?</label>
-                <select class="form-control" id="exampleFormControlSelect1">
+                <select class="form-control" id="q7">
+                <option></option>
                 <option>1 (Strongly Disagree)</option>
                 <option>2</option>
                 <option>3</option>
@@ -115,7 +122,8 @@
             <h4>Question 8</h4>
             <div class="form-group">
                 <label for="exampleFormControlSelect1">Do you spend more time with friends than family?</label>
-                <select class="form-control" id="exampleFormControlSelect1">
+                <select class="form-control" id="q8">
+                    <option></option>
                     <option>1 (Strongly Disagree)</option>
                     <option>2</option>
                     <option>3</option>
@@ -126,7 +134,8 @@
             <h4>Question 9</h4>
             <div class="form-group">
                 <label for="exampleFormControlSelect1">Are you an introvert?</label>
-                <select class="form-control" id="exampleFormControlSelect1">
+                <select class="form-control" id="q9">
+                <option></option>
                 <option>1 (Strongly Disagree)</option>
                 <option>2</option>
                 <option>3</option>
@@ -137,7 +146,8 @@
             <h4>Question 10</h4>
             <div class="form-group">
                 <label for="exampleFormControlSelect1">Are you an extrovert?</label>
-                <select class="form-control" id="exampleFormControlSelect1">
+                <select class="form-control" id="q10">
+                    <option></option>
                     <option>1 (Strongly Disagree)</option>
                     <option>2</option>
                     <option>3</option>
@@ -147,14 +157,34 @@
             </div>
     </div>
     <div>
-        <button type="button" class="btn btn-info">Submit</button>
+        <button type="button" id="submitButton" class="btn btn-info" data-toggle="modal" data-target="#matchModal">Submit</button>
+        <!-- modal -->
+        <div id="matchModal" class="modal" role="dialog">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+                    <div class="modal-body">
+                        <!-- Pseudo code: the best match name and info would be inserted below -->
+                        <!-- insert associated image -->
+                        <p>You Friend Match is: Impossible to discern</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
+    <br>
+    <br>
     <div class="footer">
-        <p><a href="https://github.com/buelowek1225/FriendFinder">API Friend List</a> | <a href="https://github.com/buelowek1225/FriendFinder">GitHub Repo</a></p>
+        <p><a href="/api/friends">API Friend List</a> | <a href="https://github.com/buelowek1225/FriendFinder">GitHub Repo</a></p>
     </div>
 
     <!-- Javascript link -->
-    <!-- <script src="assets/javascript/friendFinder.js"></script> -->
+    <script src="assets/javascript/friendFinder.js"></script>
 
 </body>
 </html>

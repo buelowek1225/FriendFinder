@@ -123,4 +123,5 @@ var friendsData = [{
     ],
 }];
 
-module.exports = { friends: friendsData };
+// exporting array
+module.exports = friendsData;
